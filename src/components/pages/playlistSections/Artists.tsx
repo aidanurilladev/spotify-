@@ -91,7 +91,7 @@ const Artists = () => {
 					<hr style={{ color: 'black' }} />
 
 					<ol className={scss.list_of_tracks}>
-						{tracks?.tracks.map((track, index) => (
+						{tracks?.tracks.map((track:any, index:number) => (
 							<li
 								onClick={() => handlePlayTrack(track.uri, index)}
 								key={index}
