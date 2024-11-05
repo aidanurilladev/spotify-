@@ -1,0 +1,184 @@
+.Artists {
+	.content {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+
+		.trackList {
+			height: 700px;
+			display: flex;
+			flex-direction: column;
+			padding: 7px 0 0 20px;
+		}
+
+		.artistHeader {
+			display: flex;
+			align-items: center;
+			margin-bottom: 20px;
+			padding: 30px;
+
+			.artistImage {
+				width: 200px;
+				height: 200px;
+				object-fit: cover;
+				border-radius: 50%;
+				margin-right: 20px;
+			}
+			.artistInfo {
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+
+				h5 {
+					font-weight: 400;
+				}
+
+				h1 {
+					font-size: 48px;
+					color: #ffffff;
+				}
+				.profile_details {
+					display: flex;
+					align-items: center;
+					gap: 10px;
+					.profile {
+						width: 40px;
+						height: 40px;
+						border-radius: 50%;
+					}
+					.artist_details {
+						font-size: 16px;
+						color: #fff;
+						span {
+							color: #b3b3b3;
+						}
+					}
+				}
+			}
+		}
+
+		.track_header,
+		.track_row {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			.left_block {
+				span {
+					padding: 0 10px;
+					text-align: left;
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+				}
+			}
+			.right_block {
+				width: 6%;
+			}
+
+			.duration_icon {
+				flex: 1;
+				text-align: right;
+			}
+		}
+
+		.track_row {
+			img {
+				width: 50px;
+				height: 50px;
+				margin-right: 10px;
+			}
+
+			.title {
+				flex: 1;
+				display: flex;
+				align-items: center;
+
+				img {
+					margin-right: 10px;
+				}
+			}
+		}
+
+		.list_of_tracks {
+			overflow-y: auto;
+			flex-grow: 1;
+
+			::-webkit-scrollbar {
+				display: none;
+			}
+			scrollbar-width: none;
+		}
+
+		.track_item {
+			display: flex;
+			align-items: center;
+			padding: 10px 0;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+			&:hover {
+				background: gray;
+			}
+			&.active {
+				background-color: green;
+			}
+			.track_index {
+				width: 40px;
+				text-align: center;
+				color: #b3b3b3;
+				flex-shrink: 0;
+			}
+
+			.track_info {
+				display: flex;
+				align-items: center;
+				flex: 2;
+				min-width: 0;
+
+				.track_image {
+					width: 50px;
+					height: 50px;
+					object-fit: cover;
+					margin-right: 15px;
+					flex-shrink: 0; /* Resim sabit genişlikte kalır */
+				}
+
+				.track_name {
+					color: #ffffff;
+					font-size: 16px;
+					white-space: nowrap;
+					overflow: hidden; /* Taşan metni gizler */
+					text-overflow: ellipsis; /* Taşan metni üç nokta ile kısaltır */
+					flex-grow: 1; /* Metin alanı esnek olarak genişler */
+				}
+			}
+
+			.track_album {
+				flex: 1;
+				color: #b3b3b3;
+				font-size: 14px;
+				min-width: 0;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+
+			.track_date {
+				flex: 1;
+				color: #b3b3b3;
+				font-size: 14px;
+				text-align: left;
+				min-width: 0;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+
+			.track_duration {
+				padding: 0 90px;
+				width: 50px;
+				color: #b3b3b3;
+				text-align: right;
+				flex-shrink: 0; /* Süre sabit genişlikte kalır */
+			}
+		}
+	}
+}

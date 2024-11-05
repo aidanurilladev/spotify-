@@ -1,0 +1,67 @@
+.FooterPage {
+	padding: 20px 0;
+	.content {
+		display: flex;
+		flex-direction: column;
+		.topBlock {
+			padding: 10px 0;
+			display: flex;
+			justify-content: space-between;
+			.title {
+				display: flex;
+				justify-content: space-between;
+				width: 900px;
+				.nav {
+					padding: 10px;
+					h3 {
+						font-size: 17px;
+						font-weight: bold;
+					}
+					h4 {
+						font-size: 16px;
+						font-weight: 500;
+						padding: 10px 0;
+						color: gray;
+					}
+				}
+			}
+			.icons {
+				display: flex;
+				justify-content: space-between;
+				gap: 20px;
+
+				div {
+					background: rgb(51, 50, 50);
+					height: 50px;
+					padding: 15px;
+					width: 50px;
+					border-radius: 50%;
+					font-size: 20px;
+				}
+			}
+		}
+		.bottomBlock {
+			padding: 30px 0;
+			display: flex;
+			justify-content: space-between;
+			.leftText {
+				display: flex;
+				gap: 20px;
+				h4 {
+					font-size: 16px;
+					font-weight: 500;
+					padding: 10px 0;
+					color: gray;
+				}
+			}
+			.right {
+				h4 {
+					font-size: 15px;
+					font-weight: 500;
+					padding: 10px 0;
+					color: gray;
+				}
+			}
+		}
+	}
+}

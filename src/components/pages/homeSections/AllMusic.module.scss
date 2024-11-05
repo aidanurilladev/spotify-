@@ -1,0 +1,291 @@
+.AllMusic {
+	.content {
+		display: flex;
+		flex-direction: column;
+		.musicList {
+			display: flex;
+			// flex-direction: column;
+			justify-content: flex-start;
+			padding: 10px 0;
+
+			.btn_music {
+				display: flex;
+				align-items: center;
+
+				button {
+					border-radius: 28px;
+					font-size: 15px;
+					margin: 10px;
+					padding: 8px 15px;
+					background-color: gray;
+				}
+				& :hover {
+					background: white;
+					color: #000;
+				}
+			}
+
+			.list_something {
+				display: flex;
+				flex-direction: column;
+
+				.list {
+					display: flex;
+					flex-wrap: wrap;
+					.track {
+						margin: 10px;
+					}
+				}
+			}
+		}
+
+		.mucisListBottom {
+			overflow-y: auto;
+			height: 100vh;
+			padding-bottom: 250px;
+			/* Kaydırma çubuğunu gizlemek için CSS */
+			/* WebKit tarayıcılarında kaydırma çubuğunu gizler */
+			::-webkit-scrollbar {
+				display: none;
+			}
+			/* Firefox tarayıcısında kaydırma çubuğunu gizler */
+			scrollbar-width: none;
+
+			.Recently {
+				.listTrackRecently {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+
+					.track {
+						position: relative;
+						display: flex;
+						flex-direction: column;
+						width: 220px;
+						align-items: center;
+						padding: 15px;
+						gap: 5px;
+						&:hover {
+							background: rgb(70, 69, 69);
+							border-radius: 8px;
+						}
+
+						&:hover .playPauseIcon {
+							opacity: 1;
+							transition: opacity 1s ease;
+						}
+
+						img {
+							width: 200px;
+							height: auto;
+							max-height: 200px;
+							object-fit: cover;
+							border-radius: 8px;
+						}
+						.trackInfo {
+							p {
+								white-space: nowrap;
+								overflow: hidden;
+								text-overflow: ellipsis;
+								width: 200px;
+								font-weight: 400;
+								font-size: 15px;
+								color: rgb(228, 217, 217);
+							}
+						}
+						.playPauseIcons {
+							position: absolute;
+							bottom: 70px;
+							right: 15px;
+							display: flex;
+							gap: 10px;
+						}
+
+						.playPauseIcon {
+							font-size: 50px;
+							color: green;
+							opacity: 0;
+							transition: opacity 0.2s ease;
+						}
+					}
+				}
+			}
+			.Popular {
+				display: flex;
+				flex-direction: column;
+
+				.listTrackPopular {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					.track {
+						position: relative;
+						display: flex;
+						flex-direction: column;
+						width: 220px;
+						align-items: center;
+						padding: 15px;
+						gap: 10px;
+						&:hover {
+							background: rgb(70, 69, 69);
+							border-radius: 8px;
+						}
+						&:hover .playPauseIcon {
+							opacity: 1;
+							transition: opacity 1s ease;
+						}
+						img {
+							width: 200px;
+							height: auto;
+							max-height: 200px;
+							object-fit: cover;
+							border-radius: 8px;
+						}
+						.trackInfo {
+							p {
+								white-space: nowrap;
+								overflow: hidden;
+								text-overflow: ellipsis;
+								width: 200px;
+								font-weight: 400;
+								font-size: 15px;
+								color: rgb(228, 217, 217);
+							}
+						}
+						.playPauseIcons {
+							position: absolute;
+							bottom: 50px;
+							right: 15px;
+							display: flex;
+							gap: 10px;
+						}
+
+						.playPauseIcon {
+							font-size: 50px;
+							color: green;
+							opacity: 0;
+							transition: opacity 0.2s ease;
+						}
+					}
+				}
+			}
+			.Artists {
+				display: flex;
+				flex-direction: column;
+
+				.listArtists {
+					display: flex;
+					align-items: center;
+					justify-content: start;
+
+					.track {
+						display: flex;
+						flex-direction: column;
+						width: 220px;
+						align-items: center;
+						padding: 15px;
+						gap: 10px;
+						&:hover {
+							background: rgb(70, 69, 69);
+							border-radius: 8px;
+						}
+
+						img {
+							width: 200px;
+							height: auto;
+							max-height: 200px;
+							object-fit: cover;
+							border-radius: 50%;
+						}
+						.trackInfo {
+							p {
+								white-space: nowrap;
+								overflow: hidden;
+								text-overflow: ellipsis;
+								width: 200px;
+								font-weight: 400;
+								font-size: 15px;
+								color: rgb(228, 217, 217);
+							}
+						}
+					}
+				}
+			}
+			.TopTracks {
+				display: flex;
+				flex-direction: column;
+				padding-bottom: 40px;
+
+				.listTracks {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					.track {
+						position: relative;
+						display: flex;
+						flex-direction: column;
+						width: 220px;
+						align-items: center;
+						padding: 15px;
+						gap: 10px;
+						&:hover {
+							background: rgb(70, 69, 69);
+							border-radius: 8px;
+						}
+						&:hover .playPauseIcon {
+							opacity: 1;
+							transition: opacity 1s ease;
+						}
+						img {
+							width: 200px;
+							height: auto;
+							max-height: 200px;
+							object-fit: cover;
+							border-radius: 8px;
+						}
+						.trackInfo {
+							p {
+								white-space: nowrap;
+								overflow: hidden;
+								text-overflow: ellipsis;
+								width: 200px;
+								font-weight: 400;
+								font-size: 15px;
+								color: rgb(228, 217, 217);
+							}
+						}
+						.playPauseIcons {
+							position: absolute;
+							bottom: 50px;
+							right: 15px;
+							display: flex;
+							gap: 10px;
+						}
+
+						.playPauseIcon {
+							font-size: 50px;
+							color: green;
+							opacity: 0;
+							transition: opacity 0.2s ease;
+						}
+					}
+				}
+			}
+			.musicFooter {
+				display: flex;
+				flex-direction: column;
+			}
+		}
+	}
+}
+
+@media(max-width:1000px){
+	.AllMusic{
+		.content{
+			.musicList{
+
+			}
+			
+		}
+	}
+}
