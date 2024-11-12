@@ -2,10 +2,12 @@
 import { FaArrowUpRightFromSquare } from 'react-icons/fa6';
 import scss from './ProfileMenu.module.scss';
 import { useHeaderStore } from '@/stores/useHeaderStore';
+import { useRouter } from 'next/navigation';
 
 const ProfileMenu = () => {
 	const { isOpenProfileMenu, logout } = useHeaderStore();
 	const title = ['Account', 'Profile', 'Settings'];
+	const router=useRouter()
 	return (
 		<div
 			className={
@@ -20,7 +22,10 @@ const ProfileMenu = () => {
 			<div className={scss.content}>
 				{title.map((el, idx) => (
 					<div key={idx} className={scss.text}>
-						<p>{el}</p>
+						{
+							el =="Profile" ? <p onClick={()=>router.push(`/profile`)}>{el}</p>: (<p>{el}</p>)
+						}
+
 					</div>
 				))}
 				<hr />

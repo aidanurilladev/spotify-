@@ -4,7 +4,6 @@
 		flex-direction: column;
 		.musicList {
 			display: flex;
-			// flex-direction: column;
 			justify-content: flex-start;
 			padding: 10px 0;
 
@@ -43,12 +42,10 @@
 			overflow-y: auto;
 			height: 100vh;
 			padding-bottom: 250px;
-			/* Kaydırma çubuğunu gizlemek için CSS */
-			/* WebKit tarayıcılarında kaydırma çubuğunu gizler */
+			
 			::-webkit-scrollbar {
 				display: none;
 			}
-			/* Firefox tarayıcısında kaydırma çubuğunu gizler */
 			scrollbar-width: none;
 
 			.Recently {
@@ -275,17 +272,6 @@
 				display: flex;
 				flex-direction: column;
 			}
-		}
-	}
-}
-
-@media(max-width:1000px){
-	.AllMusic{
-		.content{
-			.musicList{
-
-			}
-			
 		}
 	}
 }

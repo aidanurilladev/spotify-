@@ -14,6 +14,7 @@ const Playlists = () => {
 	return (
 		<div className={scss.Playlists}>
 			<div className={scss.content}>
+				<div className={scss.list}>
 				{data?.items.map((item, index) => (
 					<div
 						className={scss.block}
@@ -49,6 +50,7 @@ const Playlists = () => {
 				</div>
 
 				))}
+				</div>
 			</div>
 		</div>
 	);
